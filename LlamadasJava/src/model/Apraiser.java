@@ -5,9 +5,11 @@ import java.util.List;
 import java.util.stream.*;
 
 import exceptions.InvalidRangeException;
+import restrictions.EuropeanCall;
 import restrictions.NationalCall;
 import restrictions.Restriction;
 import restrictions.RushHourCall;
+import restrictions.SudamericanCall;
 import utilities.Hour;
 import utilities.HourRange;
 import utilities.Peso;
@@ -19,6 +21,9 @@ public class Apraiser {
 		HourRange rushHour=new HourRange(new Hour(8),new Hour(20));
 		this.restrictions.add(new RushHourCall(rushHour));
 		this.restrictions.add(new NationalCall());
+		this.restrictions.add(new SudamericanCall());
+		this.restrictions.add(new EuropeanCall());
+		this.restrictions.add(new NorthAmericanCall());
 	}
 	
 	public Peso apraise(Call call){

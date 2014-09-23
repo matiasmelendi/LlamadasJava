@@ -31,4 +31,12 @@ public class Call {
 		return caller.areaCode().equals(receiver.areaCode()); 
 	}
 
+	public boolean isInternational() {
+		return !isLocal()&& !isNational();
+	}
+
+	public Integer nationalCodeOfTheReceiver() {
+		return receiver.areaCode().nationalCode();
+	}
+
 }
