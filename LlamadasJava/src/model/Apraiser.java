@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.stream.*;
 
 import exceptions.InvalidRangeException;
+import restrictions.NationalCall;
 import restrictions.Restriction;
 import restrictions.RushHourCall;
 import utilities.Hour;
@@ -17,6 +18,7 @@ public class Apraiser {
 	public Apraiser() throws InvalidRangeException{
 		HourRange rushHour=new HourRange(new Hour(8),new Hour(20));
 		this.restrictions.add(new RushHourCall(rushHour));
+		this.restrictions.add(new NationalCall());
 	}
 	
 	public Peso apraise(Call call){

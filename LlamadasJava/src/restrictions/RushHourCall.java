@@ -14,7 +14,7 @@ public class RushHourCall extends Restriction {
 
 	@Override
 	public boolean appliesTo(Call call) {
-		return hourRange.belong(call.hour);
+		return hourRange.belong(call.hour) && call.isLocal() ;
 	}
 
 	@Override

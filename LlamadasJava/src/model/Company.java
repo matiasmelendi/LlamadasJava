@@ -20,7 +20,6 @@ public class Company {
 	}
 
 	public Peso apraise(Call call) {
-		
 		return apraiser.apraise(call);
 	}
 

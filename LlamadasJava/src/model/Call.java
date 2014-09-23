@@ -22,4 +22,13 @@ public class Call {
 		return this.duration.value();
 	}
 
+	public boolean isNational() {
+		return !caller.areaCode().localCode().equals(receiver.areaCode().localCode())
+				&& caller.areaCode().nationalCode().equals(receiver.areaCode().nationalCode()) ;
+	}
+
+	public boolean isLocal() {
+		return caller.areaCode().equals(receiver.areaCode()); 
+	}
+
 }
