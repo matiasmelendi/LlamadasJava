@@ -7,6 +7,7 @@ import java.util.stream.*;
 import exceptions.InvalidRangeException;
 import restrictions.EuropeanCall;
 import restrictions.NationalCall;
+import restrictions.NorthAmericanCall;
 import restrictions.Restriction;
 import restrictions.RushHourCall;
 import restrictions.SudamericanCall;
