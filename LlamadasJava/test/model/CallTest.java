@@ -30,12 +30,12 @@ public class CallTest {
 		sudamericanCode= new AreaCode(25,100);
 		europeanCode= new AreaCode(50,200);
 		northAmericanCode= new AreaCode(75,300);
-		localClient1= new Client("Jhon",localCode);
-		localClient2= new Client("Nick",localCode);
-		nationalClient= new Client("James",nationalCode);
-		sudamericanClient= new Client("Jim",sudamericanCode);
-		europeanClient= new Client("Jim",europeanCode);
-		northAmericanClient= new Client("George", northAmericanCode);
+		localClient1= new Client("Jhon",new TelephonicLine(localCode,1511111111));
+		localClient2= new Client("Nick",new TelephonicLine(localCode,1522222222));
+		nationalClient= new Client("James",new TelephonicLine(nationalCode,1511111111));
+		sudamericanClient= new Client("Jim",new TelephonicLine(sudamericanCode,1511111111));
+		europeanClient= new Client("Jim",new TelephonicLine(europeanCode,1511111111));
+		northAmericanClient= new Client("George",new TelephonicLine(northAmericanCode,1511111111));
 		company= new Company("CallinManiac");
 		company.addClient(localClient1);
 		company.addClient(localClient2);	

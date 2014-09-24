@@ -5,11 +5,11 @@ import utilities.Minutes;
 public class Client {
 
 	private String name;
-	public AreaCode areaCode;
+	private TelephonicLine line;
 	
-	public Client(String name,AreaCode areaCode) {
+	public Client(String name,TelephonicLine line) {
 		this.name=name;
-		this.areaCode=areaCode;
+		this.line=line;
 	}
 
 	public Call call(Client aClient, Minutes minutes) {
@@ -18,7 +18,7 @@ public class Client {
 	}
 
 	public AreaCode areaCode() {
-		return areaCode;
+		return line.areaCode();
 	}
 
 
