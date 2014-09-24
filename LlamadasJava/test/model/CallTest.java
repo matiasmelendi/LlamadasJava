@@ -51,9 +51,9 @@ public class CallTest {
 	}
 
 	@Test
-	public void testNewCallBetweenTwoClientsInRushHourForTenMinutes(){
+	public void testNewCallBetweenTwoClientsInRushHourInBussinesDayForTenMinutes(){
 		Call call=localClient1.call(localClient2,new Minutes(10));
-		assertEquals(new Peso(2.0), company.apraise(call));
+		assertEquals(new Peso(2.0).value(), company.apraise(call).value());
 	}
 	
 	/*The RushHour restriction only applies to local calls*/
@@ -84,5 +84,10 @@ public class CallTest {
 		assertEquals(new Peso(7.0), company.apraise(call));
 	}
 	
+	@Test
+	public void testLocalCallInBusinessDay(){
+		Call call=localClient1.call(localClient2,new Minutes(10));
+		assertEquals(new Peso(2.0).value(), company.apraise(call).value());
+	}
 	
 }

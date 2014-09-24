@@ -14,12 +14,12 @@ public class RushHourCall extends Restriction {
 
 	@Override
 	public boolean appliesTo(Call call) {
-		return hourRange.belong(call.hour) && call.isLocal() ;
+		return hourRange.belong(call.hour()) && call.isLocal() ;
 	}
 
 	@Override
 	public Peso rate() {
-		return new Peso(0.2);
+		return new Peso(0.1);
 	}
 
 }
